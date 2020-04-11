@@ -3,39 +3,7 @@ const inputResult = document.getElementById("decimalResult");
 const html = document.querySelector("html");
 const checkbox = document.getElementById("checkbox");
 
-function convertValue() {
-  inputResult.value = "";
-
-  let binaryDigit = inputBinary.value;
-  let convertedBinary;
-
-  if (
-    isNotBinary(binaryDigit) > 0 ||
-    binaryDigit.split("").length > 8 ||
-    !binaryDigit
-  ) {
-    alert("Digite um número binário válido!");
-    inputBinary.value = "";
-    return;
-  }
-
-  convertedBinary = parseInt(binaryDigit, 2);
-
-  inputResult.value = `${binaryDigit}² = ${convertedBinary}¹º`;
-  inputBinary.value = "";
-}
-
-function isNotBinary(binaryValue) {
-  let isNotBinary = 0;
-  let binarySplitted = binaryValue.split("");
-  binarySplitted.map((digit) =>
-    digit === "0" || digit === "1" ? null : isNotBinary++
-  );
-  return isNotBinary;
-}
-
 // change color mode
-
 const getStyle = (element, style) =>
   window.getComputedStyle(element).getPropertyValue(style);
 
@@ -80,4 +48,36 @@ if (localStorage.getItem("checkbox") === "true") {
   checkbox.setAttribute("checked", true);
 } else {
   changeColors(initialColors);
+}
+
+// Converting the binary to decimal
+function convertValue() {
+  inputResult.value = "";
+
+  let binaryDigit = inputBinary.value;
+  let convertedBinary;
+
+  if (
+    isNotBinary(binaryDigit) > 0 ||
+    binaryDigit.split("").length > 8 ||
+    !binaryDigit
+  ) {
+    alert("Digite um número binário válido!");
+    inputBinary.value = "";
+    return;
+  }
+
+  convertedBinary = parseInt(binaryDigit, 2);
+
+  inputResult.value = `${binaryDigit}² = ${convertedBinary}¹º`;
+  inputBinary.value = "";
+}
+
+function isNotBinary(binaryValue) {
+  let isNotBinary = 0;
+  let binarySplitted = binaryValue.split("");
+  binarySplitted.map((digit) =>
+    digit === "0" || digit === "1" ? null : isNotBinary++
+  );
+  return isNotBinary;
 }
