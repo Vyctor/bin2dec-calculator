@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bin 2 Dec Calculator</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <div class="calculator">
+
+    <header>
+
+      <span><a href="./index.html">Bin2Dec Converter</a></span>
+
+      <div class="switch">
+
+        <label>
+          <a>Toggle dark mode</a>
+          <input id="checkbox" type="checkbox">
+          <span class="lever"></span>
+        </label>
+
+      </div>
+
+    </header>
+
+    <div class="content">
+
+      <div class="input-field">
+
+        <input id="binaryValue" type="text" />
+
+        <label for="binaryValue">Enter the binary...</label>
+
+      </div>
+
+      <a class="waves-effect waves-light btn-large grey" onclick="convertValue()">Convert</a>
+
+      <div class="input-field">
+
+        <input id="decimalResult" type="text" disabled />
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
