@@ -28,6 +28,7 @@ constraints:
 ## Bonus features
 
 -   [x] User can enter a variable number of binary digits
+-   [x] Persistent dark mode
 
 ## Useful links and resources
 
